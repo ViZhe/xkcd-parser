@@ -6,7 +6,8 @@
     "email": "i@hoppas.ru"
   },
   "scripts": {
-    "start": "babel-node ./source/",
+    "mlab": "babel-node ./source/mlab",
+    "parse": "babel-node ./source/parse",
     "test": "eslint ./source/"
   },
   "devDependencies": {
@@ -24,7 +25,7 @@
   "dependencies": {
     "cheerio": "^0.22.0",
     "fetch-base64": "^1.0.0",
-    "node-fetch": "^1.6.3",
-    "whatwg-fetch": "^2.0.1"
+    "mongoose": "^4.7.3",
+    "node-fetch": "^1.6.3"
   }
 }
