@@ -7,7 +7,7 @@ import cheerio from 'cheerio'
 const urlEn = 'http://xkcd.com/'
 const urlRu = 'http://xkcd.ru/'
 const firstPost = 1
-const lastPost = 1773
+const lastPost = 2000
 
 let count = 1
 
@@ -66,8 +66,8 @@ async function parse(index) {
         url: urlRu + index
       }
     }
-    fs.writeFileSync(`${pathToFile}/data.json`, JSON.stringify(data, '', 2))
-    console.log(count)
+    fs.writeFileSync(`${pathToFile}/${index}.json`, JSON.stringify(data, '', 2))
+    console.log(count, index)
     count += 1
   } catch (e) {
     console.error(index, e)
